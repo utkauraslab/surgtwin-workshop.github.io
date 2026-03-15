@@ -435,21 +435,76 @@
         }
 
         /* ORGANIZERS */
+        .org-subheading {
+            font-family: 'Source Serif 4', serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--ink);
+            margin-bottom: 8px;
+            margin-top: 40px;
+        }
+        .org-subheading:first-of-type { margin-top: 0; }
+        .org-sublead {
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
         .org-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 16px;
-            margin-top: 32px;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 20px;
+            margin-bottom: 48px;
+        }
+        .org-grid-5 {
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
         }
         .org-card {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 14px;
+            padding: 24px 16px 20px;
             text-align: center;
             transition: all 0.3s;
         }
-        .org-card:hover { border-color: var(--accent); }
+        .org-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 20px rgba(15,94,151,0.08);
+            transform: translateY(-2px);
+        }
+        .org-photo {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 14px;
+            display: block;
+            border: 3px solid var(--bg-alt);
+            transition: border-color 0.3s;
+        }
+        .org-card:hover .org-photo { border-color: var(--accent-glow); }
+        .org-photo-placeholder {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Source Serif 4', serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            border: 3px solid var(--bg-alt);
+            transition: border-color 0.3s;
+        }
+        .org-photo-placeholder.tc {
+            background: linear-gradient(135deg, #e8f4fd, #d0ebfa);
+            color: var(--accent);
+        }
+        .org-photo-placeholder.so {
+            background: linear-gradient(135deg, #e0f2f1, #c8ede9);
+            color: var(--teal);
+        }
+        .org-card:hover .org-photo-placeholder { border-color: var(--accent-glow); }
         .org-name {
             font-weight: 600;
             font-size: 0.92rem;
@@ -459,6 +514,7 @@
         .org-affil {
             font-size: 0.8rem;
             color: var(--muted);
+            line-height: 1.4;
         }
 
         /* FOOTER */
@@ -774,22 +830,61 @@
 <!-- ORGANIZERS -->
 <section class="section section-wide fade-in" id="organizers">
     <h2 class="section-title">Organizers</h2>
-    <p class="section-lead">Organizing committee members will be listed here.</p>
+    <p class="section-lead">The workshop is organized by the following committee members.</p>
+
+    <!-- Technical Committee -->
+    <h3 class="org-subheading">Technical Committee</h3>
     <div class="org-grid">
         <div class="org-card">
-            <div class="org-name">Organizer 1</div>
+            <!-- Replace src with actual photo: <img class="org-photo" src="photos/tc1.jpg" alt="Name"> -->
+            <div class="org-photo-placeholder tc">TC</div>
+            <div class="org-name">Committee Member 1</div>
             <div class="org-affil">Affiliation TBA</div>
         </div>
         <div class="org-card">
-            <div class="org-name">Organizer 2</div>
+            <div class="org-photo-placeholder tc">TC</div>
+            <div class="org-name">Committee Member 2</div>
             <div class="org-affil">Affiliation TBA</div>
         </div>
         <div class="org-card">
-            <div class="org-name">Organizer 3</div>
+            <div class="org-photo-placeholder tc">TC</div>
+            <div class="org-name">Committee Member 3</div>
             <div class="org-affil">Affiliation TBA</div>
         </div>
         <div class="org-card">
-            <div class="org-name">Organizer 4</div>
+            <div class="org-photo-placeholder tc">TC</div>
+            <div class="org-name">Committee Member 4</div>
+            <div class="org-affil">Affiliation TBA</div>
+        </div>
+    </div>
+
+    <!-- Student Organizers -->
+    <h3 class="org-subheading">Student Organizers</h3>
+    <div class="org-grid org-grid-5">
+        <div class="org-card">
+            <!-- Replace with: <img class="org-photo" src="photos/so1.jpg" alt="Name"> -->
+            <div class="org-photo-placeholder so">SO</div>
+            <div class="org-name">Student Organizer 1</div>
+            <div class="org-affil">Affiliation TBA</div>
+        </div>
+        <div class="org-card">
+            <div class="org-photo-placeholder so">SO</div>
+            <div class="org-name">Student Organizer 2</div>
+            <div class="org-affil">Affiliation TBA</div>
+        </div>
+        <div class="org-card">
+            <div class="org-photo-placeholder so">SO</div>
+            <div class="org-name">Student Organizer 3</div>
+            <div class="org-affil">Affiliation TBA</div>
+        </div>
+        <div class="org-card">
+            <div class="org-photo-placeholder so">SO</div>
+            <div class="org-name">Student Organizer 4</div>
+            <div class="org-affil">Affiliation TBA</div>
+        </div>
+        <div class="org-card">
+            <div class="org-photo-placeholder so">SO</div>
+            <div class="org-name">Student Organizer 5</div>
             <div class="org-affil">Affiliation TBA</div>
         </div>
     </div>
