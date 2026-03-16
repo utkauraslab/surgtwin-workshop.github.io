@@ -499,12 +499,43 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.08); }
     font-weight: 600;
     font-size: 0.92rem;
     color: var(--ink);
+    margin-bottom: 2px;
+}
+.org-role {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent);
     margin-bottom: 4px;
+}
+.org-grid-5 .org-role {
+    color: var(--teal);
 }
 .org-affil {
     font-size: 0.8rem;
     color: var(--muted);
     line-height: 1.4;
+}
+.org-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    margin-top: 8px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+}
+.org-link:hover {
+    background: var(--accent-glow);
+    border-color: var(--accent);
+}
+.org-link svg {
+    width: 12px;
+    height: 12px;
 }
 
 /* FOOTER */
