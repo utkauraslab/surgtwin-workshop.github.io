@@ -1,3 +1,4 @@
+/* ─── VARIABLES ─── */
 :root {
     --ink: #1a1a2e;
     --body: #2d2d44;
@@ -94,8 +95,17 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.08); }
 }
 
 /* HERO */
-.hero {
+/* .hero {
     background: var(--hero-gradient);
+    padding: 140px 24px 80px;
+    position: relative;
+    overflow: hidden;
+} */
+.hero {
+    background:
+        linear-gradient(rgba(8, 20, 40, 0.98), rgba(8, 20, 40, 0.69)),
+        url("images/hero_banner.png") center/cover no-repeat,
+        var(--hero-gradient);
     padding: 140px 24px 80px;
     position: relative;
     overflow: hidden;
@@ -110,6 +120,7 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.08); }
     pointer-events: none;
 }
 .hero::after {
+    display: none;
     content: '';
     position: absolute;
     inset: 0;
@@ -315,6 +326,18 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.08); }
     font-size: 0.82rem;
     color: var(--muted);
 }
+.speaker-theme {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+    margin-top: 10px;
+}
+.speaker-theme.theme-1 { background: #e8f4fd; color: var(--accent); }
+.speaker-theme.theme-2 { background: #e0f2f1; color: var(--teal); }
+.speaker-theme.theme-3 { background: #fce4ec; color: var(--rose); }
 
 /* SCHEDULE */
 .schedule-table {
@@ -569,7 +592,7 @@ footer a:hover { color: #fff; }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .nav-links { 
+    .nav-links {
         display: none;
         position: absolute;
         top: 64px;
