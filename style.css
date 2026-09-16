@@ -338,6 +338,52 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.08); }
 .speaker-theme.theme-1 { background: #e8f4fd; color: var(--accent); }
 .speaker-theme.theme-2 { background: #e0f2f1; color: var(--teal); }
 .speaker-theme.theme-3 { background: #fce4ec; color: var(--rose); }
+.speaker-mode {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+    margin: 10px 0 0 6px;
+    background: var(--bg-alt);
+    color: var(--muted);
+}
+.speaker-bio {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+}
+.speaker-bio > summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    transition: color 0.2s;
+}
+.speaker-bio > summary::-webkit-details-marker { display: none; }
+.speaker-bio > summary::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid currentColor;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    transition: transform 0.2s;
+}
+.speaker-bio[open] > summary::before { transform: rotate(90deg); }
+.speaker-bio > summary:hover { color: var(--accent-light); }
+.speaker-bio p {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    line-height: 1.65;
+    color: var(--muted);
+    text-align: left;
+}
 
 /* SCHEDULE */
 .schedule-table {
@@ -385,6 +431,49 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.08); }
 .type-panel { background: #fce4ec; color: var(--rose); }
 .type-break { background: #f1f1f1; color: var(--muted); }
 .type-contrib { background: #e0f2f1; color: var(--teal); }
+.type-online { background: var(--bg-alt); color: var(--muted); }
+.talk-speaker {
+    display: block;
+    color: var(--muted);
+    font-size: 0.86rem;
+}
+.talk-title {
+    display: block;
+    margin-top: 4px;
+    font-weight: 600;
+    color: var(--ink);
+}
+.talk-abstract { margin-top: 4px; }
+.talk-abstract > summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--ink);
+    transition: color 0.2s;
+}
+.talk-abstract > summary::-webkit-details-marker { display: none; }
+.talk-abstract > summary::before {
+    content: "";
+    flex-shrink: 0;
+    width: 0;
+    height: 0;
+    border-left: 5px solid var(--accent);
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    transition: transform 0.2s;
+}
+.talk-abstract[open] > summary::before { transform: rotate(90deg); }
+.talk-abstract > summary:hover { color: var(--accent); }
+.talk-abstract p {
+    margin-top: 10px;
+    max-width: 68ch;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: var(--muted);
+}
 
 /* CFP SUBMIT */
 .submit-cta {

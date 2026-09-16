@@ -100,10 +100,15 @@
             <div class="org-role">Assistant Professor</div>
             <div class="speaker-affil">National University of Singapore, Singapore</div>
             <span class="speaker-theme theme-1">Theme 1: Perception & Representation Learning</span>
+            <span class="speaker-mode">Online</span>
             <a class="org-link" href="https://yuemingjin.github.io/" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 Website
             </a>
+            <details class="speaker-bio">
+                <summary>Biography</summary>
+                <p>Dr. Yueming Jin is an Assistant Professor at the Department of Biomedical Engineering, and Electrical and Computer Engineering at the National University of Singapore, awarded by Presidential Young Professorship (PYP). She is also the PI of The N.1 and WisDM institutes in NUS. Her research interests are developing AI techniques for healthcare, with an emphasized application to medical data analysis, surgical data science and robotics. She is listed in Forbes 30 under 30 Asia, Class 2024. She received the 2026 Robert Brown Promising Researcher Award from the Ministry of Education (MOE), Singapore. She also received several premium paper awards, including three best paper awards in IJCARS-MICCAI 2021, ICRA 2021 and MedIA-MICCAI 2017; AAAI 2024 Most Influential Paper; IEEE TBME featuring paper 2025, etc. She serves as Program Chair of IPCAI&rsquo;26, MIDL&rsquo;26, MICCAI&rsquo;28; Guest Associate Editor of IEEE TMI; Editorial Board Member of npj Digital Surgery. Her current Google Scholar citation is 9000+ with h-index 41.</p>
+            </details>
         </div>
         <div class="speaker-card">
             <img class="org-photo" src="images/sean_huver.jpg" alt="Dr. Sean Huver">
@@ -122,6 +127,8 @@
             <div class="org-role">Research Director & CEO</div>
             <div class="speaker-affil">Inria & Compliance Robotics, France</div>
             <span class="speaker-theme theme-2">Theme 2: Simulation & Digital Twin Modeling</span>
+            <span class="speaker-mode">Online</span>
+            <!-- TODO: add <details class="speaker-bio"> block once Christian Duriez provides a biography -->
             <a class="org-link" href="https://www.linkedin.com/in/christian-duriez-5613094/?originalSubdomain=fr" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 Website
@@ -162,17 +169,26 @@
                 <td></td>
             </tr>
             <tr>
-                <td class="time-cell">13:10 – 13:30</td>
-                <td>Dr. Yueming Jin — <em>Theme 1: Perception &amp; Representation Learning</em></td>
+                <td class="time-cell">13:10 – 13:35</td>
+                <td>
+                    <span class="talk-speaker">Dr. Yueming Jin — <em>Theme 1: Perception &amp; Representation Learning</em></span>
+                    <details class="talk-abstract">
+                        <summary>Large Foundation Model Empowered Surgical Intelligence</summary>
+                        <p>With global surgical volumes estimated by the Lancet Commission to exceed 300 million procedures annually, the need for advances in procedural safety and efficacy is more critical than ever. While minimally invasive techniques, facilitated by high-resolution laparoscopy, have demonstrably improved patient recovery profiles and intraoperative visualization, the inherent complexity of human anatomy demands a new paradigm. Artificial Intelligence (AI) is now fundamentally benefiting surgical care, with the emergence of the &ldquo;AI copilot&rdquo; representing a pivotal innovation. In this talk, I will present our latest interdisciplinary research at AI for various perioperative tasks, to support surgical education, intra-operative navigation and even semi-autonomous surgery, via improved surgical scene understanding, reasoning and anticipation. The proposed methods cover a wide range of AI topics about novel learning strategies, such as large vision foundation model, multimodal learning, agentic AI, and robot learning, etc. The challenges, up-to-date progresses and promising future directions of intelligent surgery will also be discussed.</p>
+                    </details>
+                </td>
+                <td><span class="event-type type-talk">Talk</span> <span class="event-type type-online">Online</span></td>
+            </tr>
+            <tr>
+                <td class="time-cell">13:35 – 14:05</td>
+                <td>
+                    <span class="talk-speaker">Dr. Sean Huver — <em>Theme 2: Simulation &amp; Digital Twin Modeling</em></span>
+                    <span class="talk-title">The Generative AI Flywheel for Healthcare Robotics</span>
+                </td>
                 <td><span class="event-type type-talk">Talk</span></td>
             </tr>
             <tr>
-                <td class="time-cell">13:30 – 14:00</td>
-                <td>Dr. Sean Huver — <em>Theme 2:</em> The Generative AI Flywheel for Healthcare Robotics</td>
-                <td><span class="event-type type-talk">Talk</span></td>
-            </tr>
-            <tr>
-                <td class="time-cell">14:00 – 14:55</td>
+                <td class="time-cell">14:05 – 14:55</td>
                 <td>Coffee Break &amp; Poster Session</td>
                 <td><span class="event-type type-break">Break</span> <span class="event-type type-contrib">Poster</span></td>
             </tr>
@@ -182,17 +198,23 @@
                 <td><span class="event-type type-contrib">Lightning</span></td>
             </tr>
             <tr>
-                <td class="time-cell">15:10 – 15:30</td>
-                <td>Dr. Christian Duriez — <em>Theme 2: Simulation &amp; Digital Twin Modeling</em></td>
-                <td><span class="event-type type-talk">Talk</span></td>
+                <td class="time-cell">15:10 – 15:35</td>
+                <td>
+                    <span class="talk-speaker">Dr. Christian Duriez — <em>Theme 2: Simulation &amp; Digital Twin Modeling</em></span>
+                    <details class="talk-abstract">
+                        <summary>Simulation Tools in SOFA for Soft Surgical Robotics</summary>
+                        <p>SOFA is an open-source simulation framework originally developed for surgical simulation, with a particular focus on the modeling of soft tissues. Over the years, it has also become widely used for the simulation of soft robots, making it a particularly relevant platform for the development of soft robotic technologies for surgical applications. This presentation will introduce several simulation tools available in SOFA, including hyper- and visco-elastic finite element modeling, contact and interaction modeling, and inverse modeling methods. Then, through concrete examples, we will illustrate how these tools can support different stages of soft surgical robot development, from robot design and optimization to control and autonomous navigation. We will also discuss how SOFA-based simulation could contribute to bridging soft robotics and artificial intelligence.</p>
+                    </details>
+                </td>
+                <td><span class="event-type type-talk">Talk</span> <span class="event-type type-online">Online</span></td>
             </tr>
             <tr>
-                <td class="time-cell">15:30 – 16:00</td>
+                <td class="time-cell">15:35 – 16:05</td>
                 <td>Dr. Michael Yip — <em>Theme 3: Learning &amp; Generative Methods</em></td>
                 <td><span class="event-type type-talk">Talk</span></td>
             </tr>
             <tr>
-                <td class="time-cell">16:00 – 16:25</td>
+                <td class="time-cell">16:05 – 16:25</td>
                 <td>Contributed Spotlight Presentations</td>
                 <td><span class="event-type type-contrib">Spotlight</span></td>
             </tr>
@@ -351,6 +373,16 @@
             <div class="org-role">PhD Student</div>
             <div class="org-affil">University of Tennesse Knoxville, USA</div>
             <a class="org-link" href="https://www.linkedin.com/in/farong-wang-b8b367293/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Website
+            </a>
+        </div>
+        <div class="org-card">
+            <img class="org-photo" src="images/gabriel_johnson.jpg" alt="Gabriel Johnson">
+            <div class="org-name">Gabriel Johnson</div>
+            <div class="org-role">PhD Student</div>
+            <div class="org-affil">University of Tennesse Knoxville, USA</div>
+            <a class="org-link" href="https://www.linkedin.com/in/gabriel-pascal-johnson/" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 Website
             </a>
