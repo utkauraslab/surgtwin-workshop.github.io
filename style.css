@@ -1054,3 +1054,41 @@ footer a:hover { color: #fff; }
     vertical-align: middle;
     letter-spacing: 0.01em;
 }
+
+/* Spotlight line-up, revealed from the schedule row */
+.spotlight-list {
+    list-style: none;
+    counter-reset: sp;
+    margin-top: 10px;
+    max-width: 62ch;
+}
+.spotlight-list li {
+    counter-increment: sp;
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 10px;
+}
+.spotlight-list li:last-child { margin-bottom: 0; }
+.spotlight-list li::before {
+    content: counter(sp);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+}
+.sp-title {
+    display: block;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.32;
+}
+.sp-authors {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.38;
+    margin-top: 1px;
+}
